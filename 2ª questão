@@ -1,0 +1,41 @@
+# 1ª Sequência de Fibonacci:
+
+numero = int(input("Digite um número: "))
+
+fibonacci = [0, 1]
+while fibonacci[-1] < numero:
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+
+if numero in fibonacci:
+    print(f"{numero} pertence à sequência de Fibonacci")
+else:
+    print(f"{numero} não pertence à sequência de Fibonacci")
+    
+ 
+# 3ª Faturamento mensal por estado:
+
+faturamento_mensal = {
+    'SP': 67836.43,
+    'RJ': 36678.66,
+    'MG': 29229.88,
+    'ES': 27165.48,
+    'Outros': 19849.53
+}
+
+total = sum(faturamento_mensal.values())
+
+for estado, faturamento in faturamento_mensal.items():
+    percentual = faturamento / total * 100
+    print(f"{estado}: {percentual:.2f}%")
+    
+    
+    
+#4ª inversão de caracteres de uma string
+
+string = str(input("Digite alguma palavra: "))
+
+inversa = ""
+for i in range(len(string)-1, -1, -1):
+    inversa += string[i]
+
+print(inversa)
